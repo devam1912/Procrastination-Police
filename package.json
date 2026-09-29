@@ -2,6 +2,7 @@
   "name": "procrastination-police",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +10,9 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "format": "prettier --write src tests scripts README.md *.ts *.mjs package.json",
+    "format:check": "prettier --check src tests scripts README.md *.ts *.mjs package.json"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.0",
@@ -29,6 +32,7 @@
     "@types/react-dom": "^19.2.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "^16.0.0",
+    "prettier": "^3.9.9",
     "tailwindcss": "^4.1.0",
     "typescript": "^5.9.0",
     "vitest": "^4.1.11"
